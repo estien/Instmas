@@ -28,6 +28,13 @@
 
     <x:String x:Key="ChevronGlyph">&#xE26B;</x:String>
 
+    <!-- Custom Instmas Styles -->
+    <Style x:Key="FutureDayTileStyle" TargetType="Rectangle">
+        <Setter Property="Width" Value="250"/>
+        <Setter Property="Height" Value="180"/>
+        <Setter Property="Stroke" Value="Yellow"/>
+    </Style>
+    
     <!-- RichTextBlock styles -->
 
     <Style x:Key="BasicRichTextStyle" TargetType="RichTextBlock">
