@@ -22,18 +22,21 @@ namespace InstmasService.Controllers
             _objectStore = new ObjectStore();
         }
 
+        [HttpGet]
         public string ClearWinners()
         {
             var result = _objectStore.ClearAll();
             return result.ToString();
         }
 
+        [HttpGet]
         public string Clear(string id)
         {
             _objectStore.Remove(id);
             return "Success!";
         }
 
+        [HttpGet]
         public string PickAWinner()
         {
             var startDate = Settings.StartDate;
@@ -46,6 +49,7 @@ namespace InstmasService.Controllers
             }
             return "Success!";
         }
+
 
         private Picture GetPictureForDay(int i)
         {
