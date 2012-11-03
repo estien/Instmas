@@ -54,12 +54,6 @@ namespace InstmasService.Controllers
             return winners;
         }
 
-        [HttpGet]
-        public List<Picture> PickAWinner2()
-        {
-            return PickAWinner();
-        }
-
         private Picture GetPictureForDay(int id)
         {
             var request = new RestRequest(
@@ -67,8 +61,9 @@ namespace InstmasService.Controllers
                 string.Format(_hashTag, id + 1)));
             request.AddParameter("client_id", Settings.ClientId);
             var result = _client.Execute<InstagramResponse>(request);
-            var pic = _picturePicker.PickPicture(result.Data, _objectStore.GetPictureIds()) ?? new Picture { IsNull = true };
+            var pic = _picturePicker.PickPicture(result.Data, _objectStore.GetPictureIds()) ?? new Picture { IsNull = true, Id = Guid.NewGuid().ToString()};
             pic.ForDate = Settings.StartDate.AddDays(id);
+            pic.PublishedDate = Settings.StartDate.AddDays(id);
             return pic;
         }
     }
