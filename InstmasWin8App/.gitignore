@@ -1,7 +1,0 @@
-*.suo
-*.user
-*.vspscc
-*.vssscc
-_ReSharper*
-bin/
-obj/
