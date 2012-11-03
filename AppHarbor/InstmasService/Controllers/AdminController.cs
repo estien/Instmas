@@ -54,6 +54,11 @@ namespace InstmasService.Controllers
             return winners;
         }
 
+        [HttpGet]
+        public List<Picture> PickAWinner2()
+        {
+            return PickAWinner();
+        }
 
         private Picture GetPictureForDay(int i)
         {
