@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Web.Http;
 using InstmasService.Models;
 using InstmasService.Utils;
@@ -37,17 +38,20 @@ namespace InstmasService.Controllers
         }
 
         [HttpGet]
-        public string PickAWinner()
+        public List<Picture> PickAWinner()
         {
-            var startDate = Settings.StartDate;
+            var winners = new List<Picture>();
+                var startDate = Settings.StartDate;
             var daysSinceStartDate = (DateTime.Today - startDate).Days;
             var lower = _objectStore.GetPictures().Count;
             var upper = daysSinceStartDate > 24 ? 24 : daysSinceStartDate;
             for (int i = lower; i < upper; i++)
             {
-                _objectStore.AddPicture(GetPictureForDay(i));
+                var winner = GetPictureForDay(i);
+                winners.Add(winner);
+                _objectStore.AddPicture(winner);
             }
-            return "Success!";
+            return winners;
         }
 
 
