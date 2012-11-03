@@ -18,7 +18,7 @@
 
             <!-- Application-specific resources -->
 
-            <x:String x:Key="AppName">InstmasWin8App</x:String>
+            <x:String x:Key="AppName">Instmas adventskalender</x:String>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

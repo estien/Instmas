@@ -9,5 +9,10 @@ namespace InstmasWin8App.DataModel
     public class Day
     {
         public int DayNumber { get; set; }
+
+        public override string ToString()
+        {
+            return "Dag " + DayNumber;
+        }
     }
 }

@@ -33,3 +33,11 @@ C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\System.We
 C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\obj\Debug\InstmasService.csprojResolveAssemblyReference.cache
 C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\obj\Debug\InstmasService.dll
 C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\obj\Debug\InstmasService.pdb
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\RestSharp.dll
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\RestSharp.xml
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\MongoDB.Bson.dll
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\MongoDB.Driver.dll
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\MongoDB.Bson.pdb
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\MongoDB.Bson.xml
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\MongoDB.Driver.pdb
+C:\KodePusling\Win8Hackathon\Instmas\InstmasService\InstmasService\bin\MongoDB.Driver.xml

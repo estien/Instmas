@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using InstmasWin8App.Common;
 using InstmasWin8App.DataModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -21,7 +22,7 @@ namespace InstmasWin8App
     /// A page that displays a collection of item previews.  In the Split Application this page
     /// is used to display and select one of the available groups.
     /// </summary>
-    public sealed partial class CalendarPage : InstmasWin8App.Common.LayoutAwarePage
+    public sealed partial class CalendarPage : LayoutAwarePage
     {
         public CalendarPage()
         {
@@ -40,11 +41,17 @@ namespace InstmasWin8App
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             var items = new List<Day>();
-            for (int i = 1; i < 25; i++)
+            for (int i = 1; i <= 24; i++)
             {
                 items.Add(new Day {DayNumber = i});
             }
             this.DefaultViewModel["Items"] = items;
+        }
+
+        private void DayClick(object sender, ItemClickEventArgs e)
+        {
+            var itemId = ((Day) (e.ClickedItem)).DayNumber;
+            Frame.Navigate(typeof (DayPage), itemId);
         }
     }
 }
