@@ -59,15 +59,6 @@
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\DayPage.xaml">
       <PackagePath>DayPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\GroupedItemsPage.xaml">
-      <PackagePath>GroupedItemsPage.xaml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\GroupDetailPage.xaml">
-      <PackagePath>GroupDetailPage.xaml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\ItemDetailPage.xaml">
-      <PackagePath>ItemDetailPage.xaml</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\CalendarPage.xaml">
       <PackagePath>CalendarPage.xaml</PackagePath>
     </AppxPackagedFile>

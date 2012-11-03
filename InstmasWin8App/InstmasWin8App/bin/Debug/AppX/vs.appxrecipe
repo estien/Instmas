@@ -16,25 +16,25 @@
     <AppXManifest Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-11-03T13:04:18.414</Modified>
+      <Modified>2012-11-03T13:23:31.204</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\InstmasWin8App.exe">
       <PackagePath>InstmasWin8App.exe</PackagePath>
-      <Modified>2012-11-03T13:04:18.171</Modified>
+      <Modified>2012-11-03T13:23:31.062</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\InstmasWin8App.pdb">
       <PackagePath>InstmasWin8App.pdb</PackagePath>
-      <Modified>2012-11-03T13:04:18.158</Modified>
+      <Modified>2012-11-03T13:23:31.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasService\Instmas.Data\bin\Debug\Instmas.Data.dll">
       <PackagePath>Instmas.Data.dll</PackagePath>
-      <Modified>2012-11-03T09:37:37.821</Modified>
+      <Modified>2012-11-03T13:05:12.042</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasService\Instmas.Data\bin\Debug\Instmas.Data.pdb">
       <PackagePath>Instmas.Data.pdb</PackagePath>
-      <Modified>2012-11-03T09:37:37.809</Modified>
+      <Modified>2012-11-03T13:05:12.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -80,25 +80,13 @@
       <PackagePath>DayPage.xaml</PackagePath>
       <Modified>2012-11-03T13:02:08.602</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\GroupedItemsPage.xaml">
-      <PackagePath>GroupedItemsPage.xaml</PackagePath>
-      <Modified>2012-11-03T10:29:32.280</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\GroupDetailPage.xaml">
-      <PackagePath>GroupDetailPage.xaml</PackagePath>
-      <Modified>2012-11-03T09:34:32.570</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\ItemDetailPage.xaml">
-      <PackagePath>ItemDetailPage.xaml</PackagePath>
-      <Modified>2012-11-03T09:34:32.588</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\CalendarPage.xaml">
       <PackagePath>CalendarPage.xaml</PackagePath>
       <Modified>2012-11-03T13:01:15.855</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Dev\Instmas\InstmasWin8App\InstmasWin8App\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-11-03T12:08:33.687</Modified>
+      <Modified>2012-11-03T13:22:29.344</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
