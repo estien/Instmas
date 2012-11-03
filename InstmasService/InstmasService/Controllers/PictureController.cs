@@ -2,36 +2,49 @@
 using System.Collections.Generic;
 using System.Web.Http;
 using Instmas.Data.Models;
+using InstmasService.Models;
+using InstmasService.Utils;
+using RestSharp;
 
 namespace InstmasService.Controllers
 {
     public class PictureController : ApiController
     {
+        private readonly string _hashTag;
+        private readonly RestClient _client;
+        private readonly PicturePicker _picturePicker;
+
+        public PictureController()
+        {
+            _client = new RestClient("https://api.instagram.com");
+            _hashTag = Settings.HashTag;
+            _picturePicker = new PicturePicker();
+        }
+
         // GET api/picture
-        public IEnumerable<string> Get()
+        public IEnumerable<Picture> Get()
         {
-            throw new NotImplementedException();
+            var startDate = Settings.StartDate;
+            var daysSinceStartDate = (DateTime.Today - startDate).Days;
+            var upper = daysSinceStartDate > 24 ? 24 : daysSinceStartDate;
+            var pics = new List<Picture>();
+            for (int i = 0; i < upper; i++)
+            {
+                pics.Add(GetPictureForDay(i));
+            }
+            return pics;
         }
 
-        // GET api/picture/5
-        public string Get(int id)
+        private Picture GetPictureForDay(int i)
         {
-            return "value";
-        }
-
-        // POST api/picture
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/picture/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/picture/5
-        public void Delete(int id)
-        {
+            var request = new RestRequest(
+                string.Format("/v1/tags/{0}/media/recent",
+                string.Format(_hashTag, i+1)));
+            request.AddParameter("client_id", Settings.ClientId);
+            var result = _client.Execute<InstagramResponse>(request);
+            var pic = _picturePicker.PickPicture(result.Data) ?? new Picture{IsNull = true};
+            pic.ForDate = Settings.StartDate.AddDays(i);
+            return pic;
         }
     }
 }
