@@ -60,15 +60,15 @@ namespace InstmasService.Controllers
             return PickAWinner();
         }
 
-        private Picture GetPictureForDay(int i)
+        private Picture GetPictureForDay(int id)
         {
             var request = new RestRequest(
                 string.Format("/v1/tags/{0}/media/recent",
-                string.Format(_hashTag, i + 1)));
+                string.Format(_hashTag, id + 1)));
             request.AddParameter("client_id", Settings.ClientId);
             var result = _client.Execute<InstagramResponse>(request);
             var pic = _picturePicker.PickPicture(result.Data, _objectStore.GetPictureIds()) ?? new Picture { IsNull = true };
-            pic.ForDate = Settings.StartDate.AddDays(i);
+            pic.ForDate = Settings.StartDate.AddDays(id);
             return pic;
         }
     }
