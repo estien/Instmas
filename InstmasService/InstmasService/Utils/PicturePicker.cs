@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Instmas.Data.Models;
 using InstmasService.Models;
@@ -15,7 +16,7 @@ namespace InstmasService.Utils
             _client = new RestClient("https://api.instagram.com");
         }
 
-        public Picture PickPicture(InstagramResponse response)
+        public Picture PickPicture(InstagramResponse response, IEnumerable<string> previousPictures)
         {
             if (response == null || !response.data.Any()) return null;
 
@@ -31,7 +32,8 @@ namespace InstmasService.Utils
                     var userResponse = _client.Execute<InstagramUserResponse>(request);
                     var userData = userResponse.Data;
                     var score = GetScore(instagramPicture, userData.data);
-                    if (!(score > highestScore)) continue;
+                    if (!(score > highestScore) || previousPictures.Contains(instagramPicture.id)) 
+                        continue;
                     highestScore = score;
                     winner = instagramPicture;
                 }
@@ -79,7 +81,8 @@ namespace InstmasService.Utils
                                            Width = winner.images.thumbnail.width
                                        },
                            Likes = winner.likes.count,
-                           ProfilePictureUrl = winner.user.profile_picture
+                           ProfilePictureUrl = winner.user.profile_picture,
+                           Id = winner.id
                        };
         }
 
