@@ -36,19 +36,7 @@ namespace InstmasWin8App.PictureService
 
             // The following line sets a "User-Agent" request header as a default header on the HttpClient instance.
             // Default headers will be sent with every request sent from this HttpClient instance.
-            httpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Sample", "v8"));
-        }
-
-        internal static void ScenarioStarted(Button startButton, Button cancelButton)
-        {
-            startButton.IsEnabled = false;
-            cancelButton.IsEnabled = true;
-        }
-
-        internal static void ScenarioCompleted(Button startButton, Button cancelButton)
-        {
-            startButton.IsEnabled = true;
-            cancelButton.IsEnabled = false;
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
     }
 }
