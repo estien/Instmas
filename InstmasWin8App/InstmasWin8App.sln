@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstmasWin8App", "InstmasWi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instmas.Data", "..\InstmasService\Instmas.Data\Instmas.Data.csproj", "{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instmas.ServiceGateway", "Instmas.ServiceGateway\Instmas.ServiceGateway.csproj", "{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,16 @@ Global
 		{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}.Release|ARM.ActiveCfg = Release|Any CPU
 		{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}.Release|x64.ActiveCfg = Release|Any CPU
 		{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}.Release|x86.ActiveCfg = Release|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Release|x64.ActiveCfg = Release|Any CPU
+		{67ADF1A2-C703-4FCB-97C5-A185AE409ACE}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

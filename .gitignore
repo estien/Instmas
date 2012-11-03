@@ -3,5 +3,5 @@
 *.vspscc
 *.vssscc
 _ReSharper*
-*/bin/
+bin/
 obj/
