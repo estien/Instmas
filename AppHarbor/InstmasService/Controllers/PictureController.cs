@@ -10,7 +10,7 @@ namespace InstmasService.Controllers
 {
     public class PictureController : ApiController
     {
-        private readonly ObjectStore _objectStore;
+        private readonly IObjectStore _objectStore;
 
         public PictureController()
         {

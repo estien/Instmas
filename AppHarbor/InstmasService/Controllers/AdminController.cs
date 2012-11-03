@@ -13,7 +13,7 @@ namespace InstmasService.Controllers
         private readonly string _hashTag;
         private readonly RestClient _client;
         private readonly PicturePicker _picturePicker;
-        private readonly ObjectStore _objectStore;
+        private readonly IObjectStore _objectStore;
 
         public AdminController()
         {

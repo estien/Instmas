@@ -6,7 +6,7 @@ using Instmas.Data.Models;
 
 namespace InstmasService.Utils
 {
-    public class ObjectStore
+    public class ObjectStore : IObjectStore
     {
         private const string PicturesKey = "pictures";
         private readonly MongoDatabase _database;
