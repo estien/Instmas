@@ -3,3 +3,8 @@ C:\KodePusling\Win8Hackathon\Instmas\InstmasService\Instmas.Data\bin\Debug\Instm
 C:\KodePusling\Win8Hackathon\Instmas\InstmasService\Instmas.Data\obj\Debug\Instmas.Data.csprojResolveAssemblyReference.cache
 C:\KodePusling\Win8Hackathon\Instmas\InstmasService\Instmas.Data\obj\Debug\Instmas.Data.dll
 C:\KodePusling\Win8Hackathon\Instmas\InstmasService\Instmas.Data\obj\Debug\Instmas.Data.pdb
+F:\Dev\Instmas\InstmasService\Instmas.Data\bin\Debug\Instmas.Data.dll
+F:\Dev\Instmas\InstmasService\Instmas.Data\bin\Debug\Instmas.Data.pdb
+F:\Dev\Instmas\InstmasService\Instmas.Data\obj\Debug\Instmas.Data.csprojResolveAssemblyReference.cache
+F:\Dev\Instmas\InstmasService\Instmas.Data\obj\Debug\Instmas.Data.dll
+F:\Dev\Instmas\InstmasService\Instmas.Data\obj\Debug\Instmas.Data.pdb
