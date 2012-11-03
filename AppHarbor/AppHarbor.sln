@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstmasService", "..\InstmasService\InstmasService\InstmasService.csproj", "{5C1E2857-FAB2-4CE4-A4E7-413C4CF419C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstmasService", "InstmasService\InstmasService.csproj", "{2F2F1DC5-C93E-49F0-8CF4-6CB72D26AE77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instmas.Data", "..\InstmasService\Instmas.Data\Instmas.Data.csproj", "{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Instmas.Data", "Instmas.Data\Instmas.Data.csproj", "{781D0519-8C5D-4972-A27F-0E5A6E51B265}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5C1E2857-FAB2-4CE4-A4E7-413C4CF419C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C1E2857-FAB2-4CE4-A4E7-413C4CF419C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C1E2857-FAB2-4CE4-A4E7-413C4CF419C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C1E2857-FAB2-4CE4-A4E7-413C4CF419C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E521E45-0A29-4AD7-8A3D-436ECBC6FDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2F1DC5-C93E-49F0-8CF4-6CB72D26AE77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2F1DC5-C93E-49F0-8CF4-6CB72D26AE77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2F1DC5-C93E-49F0-8CF4-6CB72D26AE77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2F1DC5-C93E-49F0-8CF4-6CB72D26AE77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{781D0519-8C5D-4972-A27F-0E5A6E51B265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{781D0519-8C5D-4972-A27F-0E5A6E51B265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{781D0519-8C5D-4972-A27F-0E5A6E51B265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{781D0519-8C5D-4972-A27F-0E5A6E51B265}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
