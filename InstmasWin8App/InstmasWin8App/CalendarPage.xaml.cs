@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 using InstmasWin8App.Common;
 using InstmasWin8App.DataModel;
 using InstmasWin8App.PictureService;
+using InstmasWin8App.Settings;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Security.Cryptography;
@@ -31,28 +33,39 @@ namespace InstmasWin8App
     /// </summary>
     public sealed partial class CalendarPage : LayoutAwarePage
     {
-
+        private InstmasSettings _settings;
 
         public CalendarPage()
         {
+            _settings = InstmasSettings.Current;
             this.InitializeComponent();
+
+            if(Windows.ApplicationModel.DesignMode.DesignModeEnabled)
+            {
+                DesignModeViewModel();
+            }
+        }
+
+        private void DesignModeViewModel()
+        {
+            DefaultViewModel["CalendarWindows"] = new ObservableCollection<CalendarWindow>
+                                           {
+                                               new CalendarWindow {DayNumber = 1},
+                                               new CalendarWindow {DayNumber = 2},
+                                               new CalendarWindow {DayNumber = 3}
+                                           };
         }
 
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
-            var items = new List<Day>();
-            for (int i = 1; i <= 24; i++)
-            {
-                items.Add(new Day {DayNumber = i});
-            }
-            this.DefaultViewModel["Items"] = items;
-            
+            var settings = InstmasSettings.Current;
+            DefaultViewModel["CalendarWindows"] = settings.CalendarWindows;
         }
         
         private void DayClick(object sender, ItemClickEventArgs e)
         {
-            var itemId = ((Day)(e.ClickedItem)).DayNumber;
-            Frame.Navigate(typeof(DayPage), itemId);
+            var calendarWindow = (CalendarWindow)(e.ClickedItem);
+            Frame.Navigate(typeof(DayPage), calendarWindow.DayNumber);
         }
     }
 }

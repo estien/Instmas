@@ -47,7 +47,7 @@ namespace InstmasWin8App
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            this.DefaultViewModel["Day"] = new Day{ DayNumber = (int) e.Parameter };
+            DefaultViewModel["CalendarWindow"] = new CalendarWindow{ DayNumber = (int) e.Parameter };
             Helpers.CreateHttpClient(ref _httpClient);
             base.OnNavigatedTo(e);
         }

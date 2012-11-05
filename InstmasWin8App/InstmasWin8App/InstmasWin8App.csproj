@@ -104,7 +104,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataModel\Day.cs" />
+    <Compile Include="DataModel\CalendarWindow.cs" />
     <Compile Include="DayPage.xaml.cs">
       <DependentUpon>DayPage.xaml</DependentUpon>
     </Compile>
@@ -119,6 +119,7 @@
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Settings\InstmasSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -126,6 +127,7 @@
     </AppxManifest>
     <None Include="Common\ReadMe.txt" />
     <None Include="InstmasWin8App_TemporaryKey.pfx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
@@ -159,6 +161,12 @@
       <Project>{781d0519-8c5d-4972-a27f-0e5a6e51b265}</Project>
       <Name>Instmas.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.10\lib\winrt45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
