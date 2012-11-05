@@ -9,6 +9,7 @@ using InstmasWin8App.DataModel;
 using InstmasWin8App.PictureService;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -29,6 +30,7 @@ namespace InstmasWin8App
     {
         private HttpClient _httpClient;
 
+
         public DayPage()
         {
             this.InitializeComponent();
@@ -36,7 +38,6 @@ namespace InstmasWin8App
 
         protected override void LoadState(object navigationParameter, Dictionary<string, object> pageState)
         {
-
         }
 
         /// <summary>
@@ -80,8 +81,6 @@ namespace InstmasWin8App
                 var commandChosen = await messageDialog.ShowAsync();
 
 
-                var hello = "http://distilleryimage6.s3.amazonaws.com/a8256f8c25aa11e29fb41231380ffec7_6.jpg";
-
             }
             catch (HttpRequestException hre)
             {
@@ -114,4 +113,5 @@ namespace InstmasWin8App
             }
         }
     }
+
 }
