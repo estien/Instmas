@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 using InstmasWin8App.DataModel;
 using Windows.Storage;
@@ -27,19 +23,21 @@ namespace InstmasWin8App.Settings
 
                 var localSettings = ApplicationData.Current.LocalSettings;
 
-                _current = new InstmasSettings();
-                var settings = JsonConvert.SerializeObject(_current);
+                
                 var container = !localSettings.Containers.ContainsKey(ContainerKey)
                                                          ? localSettings.CreateContainer(ContainerKey, ApplicationDataCreateDisposition.Always)
                                                          : localSettings.Containers[ContainerKey];
 
                 if(!container.Values.ContainsKey(SettingsKey))
                 {
+                    _current = new InstmasSettings();
+                    var settings = JsonConvert.SerializeObject(_current);
                     container.Values[SettingsKey] = settings;
                 }
                 else
                 {
                     _current = JsonConvert.DeserializeObject<InstmasSettings>(container.Values[SettingsKey] as string);
+                    _current.CalendarWindows = new ObservableCollection<CalendarWindow>(_current.CalendarWindowsSerializeable);
                 }
                 
                 return _current;
@@ -57,15 +55,16 @@ namespace InstmasWin8App.Settings
         }
 
         
-        
+        [XmlIgnore]
         public ObservableCollection<CalendarWindow> CalendarWindows { get; set; }
 
-
-
+        public List<CalendarWindow> CalendarWindowsSerializeable { get { return CalendarWindows.ToList(); } }
 
         public void Save()
         {
+            var cals = CalendarWindows;
             var settings = JsonConvert.SerializeObject(this);
+            var existingSettings = JsonConvert.DeserializeObject<InstmasSettings>(ApplicationData.Current.LocalSettings.Containers[ContainerKey].Values[SettingsKey] as string);
             ApplicationData.Current.LocalSettings.Containers[ContainerKey].Values[SettingsKey] = settings;
         }
     }

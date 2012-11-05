@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using Instmas.Data.Models;
-
-namespace InstmasWin8App.PictureService
+﻿namespace InstmasWin8App.Services
 {
     public class Api
     {

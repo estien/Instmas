@@ -81,7 +81,7 @@
         </GridView>
 
         <!-- Vertical scrolling list only used when snapped -->
-        <ListView
+        <!-- <ListView
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemsListView"
             AutomationProperties.Name="Items"
@@ -93,7 +93,7 @@
             ItemsSource="{Binding Source={StaticResource calendarWindowsViewSource}}"
             ItemTemplate="{StaticResource Standard80ItemTemplate}"
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false"/> -->
 
        
         

@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
-namespace InstmasWin8App.PictureService
+namespace InstmasWin8App.Services
 {
     internal static class Helpers
     {

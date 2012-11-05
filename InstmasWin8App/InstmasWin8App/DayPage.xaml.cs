@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using InstmasWin8App.Common;
 using InstmasWin8App.DataModel;
-using InstmasWin8App.PictureService;
+using InstmasWin8App.Services;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;

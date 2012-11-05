@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading;
 
-namespace InstmasWin8App.PictureService
+namespace InstmasWin8App.Services
 {
     public class PlugInHandler : MessageProcessingHandler
     {
